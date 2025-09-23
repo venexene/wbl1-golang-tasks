@@ -29,7 +29,7 @@ func main() {
 	a := &Action{
 		// Инициалиазция встраиваемой структуры Human
 		Human: Human{name: "Bob", age: 20},
-		speed:12,
+		speed: 12,
 	}
 	a.SayHello() // Вызов метода из встроенной структуры Human
 	a.Run() // Вызов собственного метода структуры Action
