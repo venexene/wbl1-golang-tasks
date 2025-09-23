@@ -12,7 +12,7 @@ func main() {
 	// Создание WaitGroup для ожидания завершения горутин
 	var wg sync.WaitGroup
 
-	for elem := range arr {
+	for _, elem := range arr {
 		// Увеличение счетчика на 1 перед запуском новой горутины
 		wg.Add(1)
 
