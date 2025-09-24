@@ -20,6 +20,7 @@ func main() {
 		}
 	}
 	
+	// Вывод содержимого итогового сета
 	fmt.Print("{")
 	for elem := range res {
 		fmt.Printf(" %d ", elem)
