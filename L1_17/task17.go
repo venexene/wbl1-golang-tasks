@@ -23,5 +23,5 @@ func main() {
 	target := 10
 
 	pos := binarySearch(arr, target, 0, len(arr) - 1)
-	fmt.Printf("Position of target: %d\n", pos)
+	fmt.Printf("Позиция искомого: %d\n", pos)
 }
