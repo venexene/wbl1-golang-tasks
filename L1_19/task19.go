@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"bufio"
+	"strings"
+)
 
 func reverseString(str string) string {
 	runes := []rune(str)
@@ -13,11 +18,11 @@ func reverseString(str string) string {
 }
 
 func main() {
-	var str string
-	
-	fmt.Scan(&str)
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print("Введите строку: ")
+	str, _ := reader.ReadString('\n')
+	str = strings.TrimRight(str, "\r\n")
 
 	reversedStr := reverseString(str)
-	fmt.Printf("Изначальная строка: %s\n", str)
 	fmt.Printf("Перевернутая строка: %s\n", reversedStr)
 }
