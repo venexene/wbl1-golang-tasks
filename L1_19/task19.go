@@ -21,7 +21,7 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Введите строку: ")
 	str, _ := reader.ReadString('\n')
-	str = strings.TrimRight(str, "\r\n")
+	str = strings.TrimRight(str, "\r\n") // Удаление лишнего переноса строки
 
 	reversedStr := reverseString(str)
 	fmt.Printf("Перевернутая строка: %s\n", reversedStr)
